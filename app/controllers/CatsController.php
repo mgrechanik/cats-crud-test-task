@@ -63,7 +63,7 @@ class CatsController
                 $cat->loadFromArray($_POST);
                 if (!($errors = $cat->validate())) {
                     $manageRep->create($cat);
-                    // тут флеш сообщение бы надо
+                    // тут флеш сообщение надо бы
                     redirect('/?r=list');
                 }
             } catch (\Throwable $e) {
@@ -131,6 +131,7 @@ class CatsController
         if (isset($_POST['delete_cat'])) {
             try {
                 $manageRep->deleteById(intval($id));
+                // и тут флеш сообщение
                 redirect('/?r=list');
             } catch (\Throwable $e) {
                 throw $e;
