@@ -1,0 +1,22 @@
+{
+    "name": "app/cats",
+    "description": "cats crud",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mgrechanik"
+        }
+    ],
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.76"
+    },
+    "require": {
+        "php": ">=8.2.0",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
