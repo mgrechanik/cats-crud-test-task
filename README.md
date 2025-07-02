@@ -46,3 +46,7 @@ CREATE TABLE cat_fathers (
         ON UPDATE CASCADE
 );
 ```
+
+## Как это выглядит
+
+![demo of the cats crud functionality ](https://raw.githubusercontent.com/mgrechanik/cats-crud-test-task/refs/heads/main/cats_test_task.png "CRUD котов")
