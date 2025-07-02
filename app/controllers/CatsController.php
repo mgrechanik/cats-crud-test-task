@@ -63,6 +63,7 @@ class CatsController
                 $cat->loadFromArray($_POST);
                 if (!($errors = $cat->validate())) {
                     $manageRep->create($cat);
+                    // тут флеш сообщение бы надо
                     redirect('/?r=list');
                 }
             } catch (\Throwable $e) {
@@ -100,6 +101,7 @@ class CatsController
                 $cat->loadFromArray($_POST);
                 if (!($errors = $cat->validate())) {
                     $manageRep->update($cat);
+                    // тут флеш сообщение тоже  надо
                     redirect('/?r=list');
                 }
             } catch (\Throwable $e) {

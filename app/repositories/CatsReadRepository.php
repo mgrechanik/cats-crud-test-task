@@ -7,7 +7,7 @@ namespace App\repositories;
 use App\models\Cat;
 
 /**
- * Репозиторий для всех выборок по котоам, для sql
+ * Репозиторий для всех выборок по котам, для sql
  */
 class CatsReadRepository extends BaseRepository
 {
@@ -45,7 +45,7 @@ class CatsReadRepository extends BaseRepository
     /**
      * Получаю  котов по полу и с исключением по id
      *
-     * Исключение надо, чтобы в форме редактирования не задать котенку предком его же
+     * Исключение по id надо, чтобы в форме редактирования не задать котенку предком его же
      *
      * @param int $gender
      * @param int|null $excludeId
