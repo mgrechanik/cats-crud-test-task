@@ -25,7 +25,7 @@ class Cat
     public array $father_ids = [];
 
     /**
-     * Загрузка из массива, из БД или реквеста
+     * Загрузка из массива, например из БД или реквеста
      * @param array $array
      * @return void
      */

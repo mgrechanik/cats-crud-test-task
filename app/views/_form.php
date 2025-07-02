@@ -20,7 +20,7 @@ $genders = \App\models\Cat::getGendersList();
         <?php
         foreach ($genders as $k => $v) {
             $selected = $k == $cat->gender ? ' selected' : '';
-            print '<option value="' . $k . '" ' . $selected . '>' . html($v) . '</option>';
+            print '<option value="' . html($k) . '" ' . $selected . '>' . html($v) . '</option>';
         }
 ?>
 
@@ -35,7 +35,7 @@ $genders = \App\models\Cat::getGendersList();
         <?php foreach ($females as $female):
             $selected = $female['id'] == $cat->mother_id ? ' selected' : '';
             ?>
-            <option value="<?= $female['id'] ?>"  <?= $selected ?>>
+            <option value="<?= html($female['id']) ?>"  <?= $selected ?>>
                 <?= html($female['name']) ?>
             </option>
         <?php endforeach; ?>
@@ -47,7 +47,7 @@ $genders = \App\models\Cat::getGendersList();
         <?php foreach ($males as $male):
             $selected = in_array($male['id'], $cat->father_ids) ? ' selected' : '';
             ?>
-            <option value="<?= $male['id'] ?>" <?= $selected ?>>
+            <option value="<?= html($male['id']) ?>" <?= $selected ?>>
                 <?= html($male['name']) ?>
             </option>
         <?php endforeach; ?>

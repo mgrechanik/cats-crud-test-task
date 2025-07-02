@@ -7,7 +7,7 @@ $genders = \App\models\Cat::getGendersList();
 <a href="/?r=create">Добавить Кошку/Кота</a>
 <form method="get" action="/?r=list">
     <label for="age">Возраст (в годах):</label><br>
-    <input type="number" id="age" name="age"  value="<?= $_GET['age'] ?? '' ?>"><br><br>
+    <input type="number" id="age" name="age"  value="<?= html($_GET['age'] ?? '') ?>"><br><br>
 
     <label for="gender">Пол:</label><br>
     <select id="gender" name="gender" >
@@ -15,7 +15,7 @@ $genders = \App\models\Cat::getGendersList();
         <?php
         foreach ($genders as $k => $v) {
             $selected = $k == $_GET['gender'] ? ' selected' : '';
-            print '<option value="' . $k . '" ' . $selected . '>' . html($v) . '</option>';
+            print '<option value="' . html($k) . '" ' . $selected . '>' . html($v) . '</option>';
         }
 ?>
 
@@ -37,7 +37,7 @@ $genders = \App\models\Cat::getGendersList();
                 <td><?= $cat->id ?></td>
                 <td><?= html($cat->name) ?></td>
                 <td><?= $cat->getGenderName() ?></td>
-                <td><?= $cat->age ?></td>
+                <td><?= html($cat->age) ?></td>
                 <td><a href="/?r=edit&amp;id=<?= $cat->id ?>">Редактировать</a>
                     <a href="/?r=delete&amp;id=<?= $cat->id ?>">Удалить</a>
                 </td>
