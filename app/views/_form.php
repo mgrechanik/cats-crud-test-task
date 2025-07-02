@@ -1,7 +1,4 @@
 <?php
-//var_dump($cat);
-//var_dump($females);
-//var_dump($males);
 $genders = \App\models\Cat::getGendersList();
 ?>
 <?php if ($errors) { ?>

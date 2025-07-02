@@ -1,5 +1,4 @@
 <?php
-//var_dump($cats);
 $genders = \App\models\Cat::getGendersList();
 ?>
 <h2>Список всех кошек</h2>
